@@ -1,0 +1,62 @@
+@import './common.scss';
+
+:root {
+    --bg: rgba(243, 237, 247, 1);
+    --shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    --purple: rgba(103, 80, 164, 1);
+    --text: rgba(73, 69, 79, 1);
+    --title: rgba(28, 27, 31, 1);
+    --date: rgba(202, 196, 208, 1);
+    --red: rgba(207, 27, 27, 1): --editBg:#E6DDFF --delBg:#FFE1E1
+}
+
+.nav {
+    background: var(--bg);
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_lang {
+        position: relative;
+        min-width: 55px;
+        height: 30px;
+        overflow: hidden;
+
+        &_btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            transition: .5s;
+
+            &.active {
+                top: 0;
+            }
+
+            img {
+                width: 25px;
+            }
+
+            span {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+        }
+    }
+
+    &_title {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+    }
+    &_search{
+        font-size: 30px;
+        color: var(--text);
+    }
+}
